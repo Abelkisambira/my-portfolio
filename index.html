@@ -3,32 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abel Design — Interior & Landscape Designer</title>
+    <title>Ergon Designs — Interior & Landscape Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Custom subtle gradient animation */
+        /* Refined gradient and typography */
+        body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+        h1,h2,h3 { font-family: 'Playfair Display', serif; }
         .gradient-bg {
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background: linear-gradient(-45deg, #f5f0ea, #eef6f1, #f3fbf9, #f5f0ea);
             background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            animation: gradient 20s ease infinite;
         }
         @keyframes gradient {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+        .project-card { transition: transform .28s ease, box-shadow .28s ease; }
+        .project-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 18px 40px rgba(18,24,33,0.12); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold tracking-tighter">ABEL DESIGN</span>
-            <div class="space-x-8 hidden md:block">
+            <span class="text-xl font-bold tracking-tighter">ERGON DESIGNS</span>
+            <nav class="hidden md:flex items-center space-x-8">
                 <a href="#about" class="hover:text-emerald-600 transition">About</a>
                 <a href="#portfolio" class="hover:text-emerald-600 transition">Portfolio</a>
                 <a href="#services" class="hover:text-emerald-600 transition">Services</a>
                 <a href="#contact" class="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition">Contact</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md border" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+        </div>
+        <div id="mobile-nav" class="md:hidden hidden bg-white/90 border-t border-slate-100">
+            <div class="px-6 py-4 flex flex-col space-y-2">
+                <a href="#about" class="block">About</a>
+                <a href="#portfolio" class="block">Portfolio</a>
+                <a href="#services" class="block">Services</a>
+                <a href="#contact" class="block">Contact</a>
             </div>
         </div>
     </nav>
@@ -36,8 +50,8 @@
     <header id="about" class="pt-32 pb-8 px-6">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
             <div>
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Interior & Landscape Designer</h1>
-                <p class="text-2xl text-slate-700 mb-6">Crafting thoughtful interiors and resilient outdoor spaces that blend function, materiality and the natural world.</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-2">Ergon Designs</h1>
+                <p class="text-xl text-slate-700 mb-4">Interior & Landscape Studio — thoughtful interiors and resilient outdoor spaces.</p>
                 <p class="text-slate-600 mb-6 max-w-xl">I specialise in residential and boutique commercial projects — from intimate living rooms to full landscape masterplans. My approach balances timeless aesthetics, ecological planting, and practical buildability.</p>
                 <div class="flex items-center space-x-4">
                     <a href="#contact" class="px-5 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition">Get in touch</a>
@@ -45,7 +59,7 @@
                 </div>
             </div>
             <div class="rounded-2xl overflow-hidden shadow-lg">
-                <img alt="Living room and garden" src="https://source.unsplash.com/collection/190727/1200x800" class="w-full h-80 object-cover">
+                <img alt="Living room and garden" src="https://source.unsplash.com/1200x800/?interior,living-room" class="w-full h-80 object-cover">
             </div>
         </div>
     </header>
@@ -74,43 +88,45 @@
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold mb-8">Selected Work</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <article class="group rounded-2xl overflow-hidden shadow-lg">
-                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1200x800/?interior,living-room')"></div>
+                <article data-project="coastal-living" class="project-card group rounded-2xl overflow-hidden shadow-lg cursor-pointer" tabindex="0" role="button" aria-pressed="false">
+                    <img src="https://source.unsplash.com/1200x800/?coastal,interior,living-room" alt="Coastal living room" class="w-full h-64 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold">Coastal Living Room</h3>
                         <p class="text-sm text-slate-500">Interior redesign featuring soft neutrals and natural materials.</p>
                     </div>
                 </article>
                 <article class="group rounded-2xl overflow-hidden shadow-lg">
-                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1200x800/?kitchen,interior')"></div>
-                    <div class="p-4">
-                        <h3 class="font-semibold">Kitchen Renovation</h3>
-                        <p class="text-sm text-slate-500">Custom joinery and durable finishes for a family kitchen.</p>
+                    <div data-project="kitchen-renovation" class="project-card">
+                        <img src="https://source.unsplash.com/1200x800/?kitchen,interior,renovation" alt="Kitchen renovation" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-semibold">Kitchen Renovation</h3>
+                            <p class="text-sm text-slate-500">Custom joinery and durable finishes for a family kitchen.</p>
+                        </div>
                     </div>
                 </article>
-                <article class="group rounded-2xl overflow-hidden shadow-lg">
-                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1200x800/?garden,landscape')"></div>
+                <article data-project="urban-garden" class="project-card group rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://source.unsplash.com/1200x800/?garden,landscape,urban" alt="Urban garden" class="w-full h-64 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold">Urban Garden</h3>
                         <p class="text-sm text-slate-500">Small footprint planting design to maximise biodiversity.</p>
                     </div>
                 </article>
-                <article class="group rounded-2xl overflow-hidden shadow-lg">
-                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1200x800/?terrace,roof-garden')"></div>
+                <article data-project="rooftop-terrace" class="project-card group rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://source.unsplash.com/1200x800/?rooftop,terrace,garden" alt="Rooftop terrace" class="w-full h-64 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold">Rooftop Terrace</h3>
                         <p class="text-sm text-slate-500">Lightweight planters and hardscape for city rooftop living.</p>
                     </div>
                 </article>
-                <article class="group rounded-2xl overflow-hidden shadow-lg">
-                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1200x800/?bedroom,interior')"></div>
+                <article data-project="boutique-suite" class="project-card group rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://source.unsplash.com/1200x800/?suite,hotel,interior" alt="Boutique suite" class="w-full h-64 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold">Boutique Suite</h3>
                         <p class="text-sm text-slate-500">Refined material palette and layered lighting for hospitality.</p>
                     </div>
                 </article>
-                <article class="group rounded-2xl overflow-hidden shadow-lg">
-                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1200x800/?patio,landscape')"></div>
+                <article data-project="backyard-patio" class="project-card group rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://source.unsplash.com/1200x800/?patio,backyard,landscape" alt="Backyard patio" class="w-full h-64 object-cover">
                     <div class="p-4">
                         <h3 class="font-semibold">Backyard Patio</h3>
                         <p class="text-sm text-slate-500">Durable paving, native planting and integrated seating details.</p>
@@ -120,17 +136,186 @@
         </div>
     </section>
 
+    <!-- Project modal -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="bg-white rounded-2xl max-w-4xl w-full mx-4 overflow-hidden shadow-2xl">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 id="modal-title" class="text-lg font-semibold">Project title</h3>
+                <button id="modal-close" aria-label="Close" class="text-slate-600 hover:text-slate-900">✕</button>
+            </div>
+            <div class="p-4">
+                <img id="modal-image" src="" alt="" class="w-full h-64 object-cover rounded-lg mb-4">
+                <p id="modal-desc" class="text-slate-700 mb-3">Project description</p>
+                <p id="modal-meta" class="text-sm text-slate-500"></p>
+                <div class="mt-4 flex space-x-3">
+                    <a id="modal-visit" class="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700" href="#">View more</a>
+                    <button id="modal-contact" class="px-4 py-2 border rounded-lg">Contact about this project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer id="contact" class="py-20 px-6 text-center">
         <div class="max-w-5xl mx-auto border-t border-slate-200 pt-10">
             <h2 class="text-2xl font-bold mb-4">Let's work together.</h2>
-            <p class="text-slate-500 mb-6">hello@yourname.com</p>
+            <p class="text-slate-500 mb-2">Ergon Designs — Benjamin George Muitta, Founder</p>
+            <p class="text-slate-500 mb-6">Email: <a href="mailto:contact@ergondesigns.com" class="text-emerald-600">contact@ergondesigns.com</a> · Phone: <a href="tel:+254712345678" id="phone-link" class="text-emerald-600">+254 712 345 678</a></p>
+
+            <div class="max-w-2xl mx-auto text-left mb-6">
+                <form id="contact-form" class="grid grid-cols-1 gap-3">
+                    <input id="name" name="name" placeholder="Your name" required class="px-4 py-3 rounded-lg border" />
+                    <input id="email" name="email" type="email" placeholder="Your email" required class="px-4 py-3 rounded-lg border" />
+                    <select id="pref" name="pref" class="px-4 py-3 rounded-lg border">
+                        <option value="email">Contact by email</option>
+                        <option value="call">Prefer a call</option>
+                    </select>
+                    <textarea id="message" name="message" rows="4" placeholder="Brief message" class="px-4 py-3 rounded-lg border"></textarea>
+                    <div class="flex items-center space-x-3">
+                        <button type="submit" class="px-4 py-3 bg-emerald-600 text-white rounded-lg">Send</button>
+                        <button type="button" id="clear-btn" class="px-4 py-3 border rounded-lg">Clear</button>
+                    </div>
+                </form>
+                <p id="form-status" class="text-sm text-slate-500 mt-2"></p>
+            </div>
+
             <div class="flex justify-center space-x-6 grayscale opacity-60 hover:grayscale-0">
                 <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
-                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">Behance</a>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Lightweight project data (images are online links)
+        const projects = {
+            'coastal-living': {
+                title: 'Coastal Living Room',
+                desc: 'A calm, layered interior palette using natural timbers, linen textiles and coastal planting to bring the outside in.',
+                year: '2024',
+                client: 'Private residence',
+                image: 'https://images.unsplash.com/photo-1505691723518-36a3b63b0f1b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1'
+            },
+            'kitchen-renovation': {
+                title: 'Kitchen Renovation',
+                desc: 'Durable finishes and custom joinery with an open-plan flow for family living.',
+                year: '2023',
+                client: 'Family home',
+                image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2'
+            },
+            'urban-garden': {
+                title: 'Urban Garden',
+                desc: 'Maximising biodiversity in a compact courtyard with layered planting and native species.',
+                year: '2022',
+                client: 'City client',
+                image: 'https://images.unsplash.com/photo-1505691723518-36a3b63b0f1b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3'
+            },
+            'rooftop-terrace': {
+                title: 'Rooftop Terrace',
+                desc: 'Lightweight planters, resilient plants and integrated seating for sheltered skyline views.',
+                year: '2021',
+                client: 'Apartment block',
+                image: 'https://images.unsplash.com/photo-1505691723518-36a3b63b0f1b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=4'
+            },
+            'boutique-suite': {
+                title: 'Boutique Suite',
+                desc: 'Hospitality fit-out with a refined material palette and layered lighting for atmosphere.',
+                year: '2020',
+                client: 'Boutique hotel',
+                image: 'https://images.unsplash.com/photo-1505691723518-36a3b63b0f1b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5'
+            },
+            'backyard-patio': {
+                title: 'Backyard Patio',
+                desc: 'Hardscape, integrated seating and native planting for low-maintenance outdoor living.',
+                year: '2024',
+                client: 'Private client',
+                image: 'https://images.unsplash.com/photo-1505691723518-36a3b63b0f1b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6'
+            }
+        };
+
+        // Modal controls
+        const modal = document.getElementById('project-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDesc = document.getElementById('modal-desc');
+        const modalMeta = document.getElementById('modal-meta');
+        const modalImage = document.getElementById('modal-image');
+        const modalClose = document.getElementById('modal-close');
+        const modalContact = document.getElementById('modal-contact');
+
+        function openModal() { modal.classList.remove('hidden'); modal.classList.add('flex'); modal.setAttribute('aria-hidden','false'); modalClose.focus(); }
+        function closeModal() { modal.classList.add('hidden'); modal.classList.remove('flex'); modal.setAttribute('aria-hidden','true'); }
+
+        document.querySelectorAll('.project-card, article[role="button"]').forEach(card => {
+            card.addEventListener('click', () => showProject(card));
+            card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') showProject(card); });
+        });
+
+        function showProject(card) {
+            const id = card.getAttribute('data-project');
+            const data = projects[id];
+            if (!data) return;
+            modalTitle.textContent = data.title;
+            modalDesc.textContent = data.desc;
+            modalMeta.textContent = `Year: ${data.year} · Client: ${data.client}`;
+            modalImage.src = data.image;
+            modalImage.alt = data.title;
+            openModal();
+            modalContact.onclick = () => openContactPref(data.title);
+        }
+
+        modalClose.addEventListener('click', () => closeModal());
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+        // Contact form handling: opens mail client or tel link
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+        const phoneLink = document.getElementById('phone-link');
+
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        if (mobileBtn) {
+            mobileBtn.addEventListener('click', () => {
+                const expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+                mobileBtn.setAttribute('aria-expanded', String(!expanded));
+                mobileNav.classList.toggle('hidden');
+            });
+        }
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const pref = document.getElementById('pref').value;
+            const message = document.getElementById('message').value.trim();
+            if (!name || !email) { formStatus.textContent = 'Please provide name and email.'; return; }
+
+            if (pref === 'call') {
+                const call = confirm(`Call +254 712 345 678 now?`);
+                if (call) window.location.href = 'tel:+254712345678';
+                formStatus.textContent = 'Call prompt opened.';
+                return;
+            }
+
+            // Build mailto
+            const subject = encodeURIComponent(`Website enquiry from ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+            const mailto = `mailto:contact@ergondesigns.com?subject=${subject}&body=${body}`;
+            window.location.href = mailto;
+            formStatus.textContent = 'Opening mail client...';
+        });
+
+        document.getElementById('clear-btn').addEventListener('click', () => {
+            contactForm.reset(); formStatus.textContent = '';
+        });
+
+        function openContactPref(projectTitle) {
+            const subject = encodeURIComponent(`Inquiry about ${projectTitle}`);
+            const body = encodeURIComponent(`Hi Benjamin,%0D%0A%0D%0AI am interested in ${projectTitle}. Please get in touch.%0D%0A%0D%0ARegards,`);
+            window.location.href = `mailto:contact@ergondesigns.com?subject=${subject}&body=${body}`;
+        }
+    </script>
 
 </body>
 </html>
