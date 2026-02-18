@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Abel Design — Interior & Landscape Designer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom subtle gradient animation */
@@ -23,45 +23,99 @@
 
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold tracking-tighter">PORTFOLIO.</span>
+            <span class="text-xl font-bold tracking-tighter">ABEL DESIGN</span>
             <div class="space-x-8 hidden md:block">
-                <a href="#about" class="hover:text-blue-600 transition">About</a>
-                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
-                <a href="#contact" class="px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-700 transition">Contact</a>
+                <a href="#about" class="hover:text-emerald-600 transition">About</a>
+                <a href="#portfolio" class="hover:text-emerald-600 transition">Portfolio</a>
+                <a href="#services" class="hover:text-emerald-600 transition">Services</a>
+                <a href="#contact" class="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section id="about" class="pt-32 pb-20 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6">
-                Creative Developer <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-400">Building Digital Experiences.</span>
-            </h1>
-            <p class="text-xl text-slate-600 max-w-2xl mb-8">
-                I design and build high-performance websites with a focus on clean code. Currently inspired by the greatest inovator ever, Ben Gane
-            </p>
+    <header id="about" class="pt-32 pb-8 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Interior & Landscape Designer</h1>
+                <p class="text-2xl text-slate-700 mb-6">Crafting thoughtful interiors and resilient outdoor spaces that blend function, materiality and the natural world.</p>
+                <p class="text-slate-600 mb-6 max-w-xl">I specialise in residential and boutique commercial projects — from intimate living rooms to full landscape masterplans. My approach balances timeless aesthetics, ecological planting, and practical buildability.</p>
+                <div class="flex items-center space-x-4">
+                    <a href="#contact" class="px-5 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition">Get in touch</a>
+                    <a href="#portfolio" class="px-5 py-3 border border-slate-200 rounded-lg hover:bg-slate-100 transition">View portfolio</a>
+                </div>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-lg">
+                <img alt="Living room and garden" src="https://source.unsplash.com/collection/190727/1200x800" class="w-full h-80 object-cover">
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-14 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-white rounded-2xl shadow-sm">
+                    <h3 class="font-semibold mb-2">Interior Design</h3>
+                    <p class="text-slate-600">Concepts, space planning, finishes and furniture selection for residential and commercial interiors.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm">
+                    <h3 class="font-semibold mb-2">Landscape Design</h3>
+                    <p class="text-slate-600">Planting plans, garden design, site analysis and hardscape detailing with ecological focus.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm">
+                    <h3 class="font-semibold mb-2">Project Management</h3>
+                    <p class="text-slate-600">Tender documents, contractor coordination and on-site support to bring designs to life.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="projects" class="py-20 bg-white px-6">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12">Selected Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="group cursor-pointer">
-                    <div class="h-64 bg-slate-200 rounded-2xl mb-4 overflow-hidden shadow-inner flex items-center justify-center">
-                        <span class="text-slate-400 group-hover:scale-110 transition duration-500 text-6xl">🚀</span>
+    <section id="portfolio" class="py-16 bg-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Selected Work</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article class="group rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1200x800/?interior,living-room')"></div>
+                    <div class="p-4">
+                        <h3 class="font-semibold">Coastal Living Room</h3>
+                        <p class="text-sm text-slate-500">Interior redesign featuring soft neutrals and natural materials.</p>
                     </div>
-                    <h3 class="text-xl font-bold">Project Alpha</h3>
-                    <p class="text-slate-500">A custom web application built with React and Tailwind.</p>
-                </div>
-                <div class="group cursor-pointer">
-                    <div class="h-64 bg-slate-200 rounded-2xl mb-4 overflow-hidden shadow-inner flex items-center justify-center">
-                        <span class="text-slate-400 group-hover:scale-110 transition duration-500 text-6xl">🎨</span>
+                </article>
+                <article class="group rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1200x800/?kitchen,interior')"></div>
+                    <div class="p-4">
+                        <h3 class="font-semibold">Kitchen Renovation</h3>
+                        <p class="text-sm text-slate-500">Custom joinery and durable finishes for a family kitchen.</p>
                     </div>
-                    <h3 class="text-xl font-bold">Brand Identity</h3>
-                    <p class="text-slate-500">Minimalist branding for a tech startup.</p>
-                </div>
+                </article>
+                <article class="group rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1200x800/?garden,landscape')"></div>
+                    <div class="p-4">
+                        <h3 class="font-semibold">Urban Garden</h3>
+                        <p class="text-sm text-slate-500">Small footprint planting design to maximise biodiversity.</p>
+                    </div>
+                </article>
+                <article class="group rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1200x800/?terrace,roof-garden')"></div>
+                    <div class="p-4">
+                        <h3 class="font-semibold">Rooftop Terrace</h3>
+                        <p class="text-sm text-slate-500">Lightweight planters and hardscape for city rooftop living.</p>
+                    </div>
+                </article>
+                <article class="group rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1200x800/?bedroom,interior')"></div>
+                    <div class="p-4">
+                        <h3 class="font-semibold">Boutique Suite</h3>
+                        <p class="text-sm text-slate-500">Refined material palette and layered lighting for hospitality.</p>
+                    </div>
+                </article>
+                <article class="group rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1200x800/?patio,landscape')"></div>
+                    <div class="p-4">
+                        <h3 class="font-semibold">Backyard Patio</h3>
+                        <p class="text-sm text-slate-500">Durable paving, native planting and integrated seating details.</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
