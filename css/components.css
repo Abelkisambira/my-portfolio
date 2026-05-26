@@ -1,0 +1,146 @@
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.875rem 1.5rem;
+
+    background: #059669;
+    color: white;
+
+    border-radius: 0.75rem;
+
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #047857;
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.875rem 1.5rem;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 0.75rem;
+
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #f1f5f9;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.service-card {
+    padding: 2rem;
+
+    background: white;
+
+    border-radius: 1.5rem;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    margin-bottom: 1rem;
+
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.project-card {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 1.5rem;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.project-card img {
+    height: 280px;
+    object-fit: cover;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    z-index: 2000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 800px;
+
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 1.5rem;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.5rem;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.modal-image {
+    height: 400px;
+    object-fit: cover;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-meta {
+    margin-top: 1rem;
+    color: #64748b;
+}

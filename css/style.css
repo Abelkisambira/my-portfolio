@@ -1,0 +1,183 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BASE
+========================= */
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.container {
+    width: min(1120px, calc(100% - 2rem));
+    margin-inline: auto;
+}
+
+.section-spacing {
+    padding: 6rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #059669;
+}
+
+.mobile-nav {
+    background: white;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section {
+    padding: 10rem 0 6rem;
+}
+
+.hero-badge {
+    display: inline-block;
+
+    padding: 0.5rem 1rem;
+
+    background: #d1fae5;
+    color: #047857;
+
+    border-radius: 999px;
+
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1.1;
+}
+
+.hero-description {
+    margin-top: 1.5rem;
+
+    max-width: 600px;
+
+    color: #475569;
+}
+
+.hero-image-wrapper {
+    overflow: hidden;
+
+    border-radius: 1.5rem;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 1.5rem;
+
+    margin-top: 3rem;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content p {
+    margin-top: 0.5rem;
+    color: #64748b;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-section {
+    padding: 6rem 0;
+}
+
+.contact-form {
+    max-width: 700px;
+
+    margin: 2rem auto 0;
+
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 0.75rem;
+}
+
+.form-status {
+    margin-top: 1rem;
+    color: #64748b;
+}
