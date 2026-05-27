@@ -1,29 +1,25 @@
 const projects = {
-    'coastal-living': {
-        title: 'Coastal Living Room',
+    'buwate-residence': {
+        title: 'Buwate Residence',
         description:
-            'A layered interior palette using natural materials and coastal tones.',
-        year: '2024',
-        client: 'Private Residence',
-        image: './assets/images/portfolio/coastal-living.jpg'
-    },
+            'The residential home is located in Wakiso district and it was a newly constructed.I was required to come up or create a design concept of the exterior, manage and execute.',
+        year: '2021',
+        image: './assets/images/portfolio/buwate.png', },
 
-    'kitchen-renovation': {
-        title: 'Kitchen Renovation',
+    'entebbe-residence': {
+        title: 'Entebbe Residence',
         description:
-            'Modern kitchen renovation with durable finishes and custom joinery.',
+            'The residential home is located in Wakiso district and it is newly construcThe residential home is located in Wakiso district and it is a newly constructed.I was required to come up or create a design concept for the exterior, manage and execute.ted.',
         year: '2023',
-        client: 'Family Home',
-        image: './assets/images/portfolio/kitchen-renovation.jpg'
+        image: './assets/images/portfolio/entebbe_after1.png'
     },
 
-    'urban-garden': {
-        title: 'Urban Garden',
+    'hossan-residence': {
+        title: 'Hossan Residence',
         description:
-            'Compact ecological garden design focused on biodiversity.',
-        year: '2022',
-        client: 'City Residence',
-        image: './assets/images/portfolio/urban-garden.jpg'
+            'The residential home is located in Wakiso district and it is a newly constructed. I was Designed & managed the residential house from foundation to the level its on now',
+        year: '2024',
+        image: './assets/images/portfolio/hossana_render1.png'
     }
 };
 
@@ -52,7 +48,7 @@ function openModal(project) {
         project.description;
 
     modalMeta.textContent =
-        `Year: ${project.year} • Client: ${project.client}`;
+        `Year: ${project.year}`;
 
     modal.classList.remove('hidden');
 
