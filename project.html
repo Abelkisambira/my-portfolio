@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project | Ergon Designs</title>
+    <meta name="description" content="Explore an Ergon Designs interior and landscape project." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/project.css" />
+  </head>
+  <body>
+    <nav class="project-nav">
+      <div class="container nav-shell">
+        <a href="./index.html" class="brand" aria-label="Ergon Designs home">
+          <span class="brand-mark">E<span>.</span></span>
+          <span>ERGON <em>DESIGNS</em></span>
+        </a>
+        <a class="back-link" href="./index.html#portfolio">Back to projects</a>
+      </div>
+    </nav>
+
+    <main id="project-page">
+      <header class="project-hero">
+        <div class="container project-showcase">
+          <div class="project-intro">
+            <p id="project-type" class="kicker">Residential project</p>
+            <h1 id="project-title">Project</h1>
+            <p id="project-summary" class="summary"></p>
+            <dl class="project-facts">
+              <div><dt>Location</dt><dd id="project-location"></dd></div>
+              <div><dt>Completed</dt><dd id="project-year"></dd></div>
+              <div><dt>Scope</dt><dd id="project-scope"></dd></div>
+            </dl>
+          </div>
+          <div class="hero-image-wrap">
+            <img id="project-hero-image" src="" alt="" />
+            <p id="hero-image-stage" class="hero-image-stage">Stage 01 · Rendered vision</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="gallery-section">
+        <div class="container gallery-showcase">
+          <div class="gallery-stage">
+            <div class="gallery-image-wrap">
+              <img id="gallery-image" src="" alt="" />
+              <span id="gallery-count" class="gallery-count">01 / 01</span>
+            </div>
+            <div class="gallery-controls">
+              <button id="gallery-previous" type="button" aria-label="Previous image">Previous</button>
+              <button id="gallery-next" type="button" aria-label="Next image">Next</button>
+            </div>
+            <div id="gallery-thumbnails" class="gallery-thumbnails" aria-label="Project gallery navigation"></div>
+          </div>
+
+          <aside class="gallery-story">
+            <p class="kicker">Project gallery</p>
+            <h2 id="gallery-title">A closer look</h2>
+            <p id="gallery-copy" class="gallery-copy"></p>
+            <div class="story-rule"></div>
+            <p id="gallery-stage" class="story-label">Stage 01</p>
+            <p id="gallery-caption" class="gallery-caption"></p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="next-step">
+        <div class="container next-step-inner">
+          <p class="kicker">Your project</p>
+          <h2>Have a space in mind?</h2>
+          <a href="./index.html#contact" class="contact-link">Talk to our studio</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/project-page.js"></script>
+  </body>
+</html>
