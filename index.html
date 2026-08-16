@@ -348,9 +348,11 @@
     </div>
   </div>
   
-  <div class="container footer-bottom">
-    <p>&copy; <span id="copyright-year">2026</span> Ergon Designs. All rights reserved.</p>
-    <p>Interior &amp; Landscape Studio</p>
+  <div class="container footer-bottom" >
+    <p>
+  &copy; <span id="copyright-year"></span>
+  Ergon Designs. All rights reserved.
+</p>
   </div>
 </footer>
     <div id="project-modal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true">
@@ -380,5 +382,9 @@
     <script src="./js/mobile.menu.js"></script>
     <script src="./js/contact_form.js"></script>
     <script src="./js/app.js"></script>
+    <script>
+  document.getElementById("copyright-year").textContent =
+    new Date().getFullYear();
+</script>
   </body>
 </html>
